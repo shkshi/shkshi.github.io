@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+
+     <script src="arrow-key-rotation.js"></script>
+     <script src="play-on-window-click.js"></script>
+     <script src="play-on-vrdisplayactivate-or-enter-vr.js"></script>
+     <script src="hide-once-playing.js"></script>
+     <script src="a-frame-touch-look-controls.js"></script>
+ 
+    <style type="text/css">
+        body {
+              margin: 0;
+              padding: 0;
+              width: 100vw;
+              height: 100vh;
+          }
+          #canvas {
+              margin: 0;
+              padding: 0;
+               width: 100vw;
+              height: 100vh;
+          }
+      </style>
+  </head>
+  <body>
+    <a-scene class="fullscreen">
+      <a-videosphere src="#video" 
+      play-on-window-click
+      play-on-vrdisplayactivate-or-enter-vr>
+</a-videosphere>
+<a-camera>
+<!-- Define camera with zero user height, movement disabled and arrow key rotation added. -->
+<a-entity camera="user-height: 0.6;" touch-look-controls></a-entity>
+<!-- Text elements for display messaging. -->
+
+<!--
+This should work with, at least:
+Safari Technology Preview on MacOS, Edge on Windows 10, Oculus Browser, Samsung Internet, Chrome on Android
+(application/x-mpegurl, which is native HLS).
+Firefox on MacOS / Windows, Chrome on MacOS / Windows 
+(video/mp4).
+This may fail with, at least:
+Safari on MacOS / iOS (HLS and/or CORS bugs), Chromium (missing codec support).
+-->
+</a-camera>      
+
+<!-- Don't wait for the video to load, we're going to stream it. -->
+<a-assets timeout="1">
+<!-- Multiple source video. -->
+<video id="video" style="display:none"
+autoplay muted loop playsinline webkit-playsinline>
+<!-- Native HLS video source. -->
+
+<!-- MP4 video source. -->
+<source type="video/mp4"
+src="/scenes/vid/b.mp4" />
+</video>
+</a-assets>
+
+
+    </a-scene>
+
+  </body>
+</html>
