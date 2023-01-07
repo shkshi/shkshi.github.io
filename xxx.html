@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>X X X</title>
+
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <style>
+    body {
+	background-color: rgb(247, 247, 247);
+	
+	width: 100%;
+	height: 100%;
+	color: white !important;
+    padding: 0;
+  margin: 0;
+}
+
+
+.miku
+{
+	position:fixed;
+	opacity: 0.3;
+	bottom: 0px;
+	right: 0px;
+	padding: 0;
+	width: 800px;
+	height: 500px;
+	background: url("https://s32.postimg.org/kwsqgp305/image.png");
+	background-size: cover;
+}
+
+.xxx{
+	background-color: rgb(255, 219, 230);
+  color: red !important;
+}
+
+a, figure {
+  display: inline-block;
+}
+figcaption {
+  margin: 10px 0 0 0;
+  font-variant: small-caps;
+  font-family: Arial;
+  font-weight: bold;
+  color: #bb3333;
+}
+figure {
+  padding: 5px;
+}
+
+
+.kar66{
+  max-width: 40%; 
+  max-height: 40%;
+  padding-top: 300px;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: absolute;
+  width: auto; 
+  height: auto; 
+  z-index: 1;
+  left: 0;
+}
+
+.kar99{
+  max-width: 40%; 
+  max-height: 40%;
+  padding-top: 300px;
+  padding-left: 20px;
+  padding-right: 20px;
+ position: absolute;
+  width: auto; 
+  height: auto; 
+  z-index: 1;
+  right: 0;
+}
+
+.main {
+	padding-left: 15%;
+	padding-right: 15%;
+    margin: 10%; 
+
+   } 
+   .content {
+    padding: 10px; 
+    margin: 10px; 
+   }
+   .MikuWelcome {
+   	width: 40%;
+   	background: white !important;
+   	color: blue !important;
+   	font-size: 36px;
+   }
+   .text {
+   	font-size:24px;
+   	color:white;
+   	margin: 20px;
+   }
+ li {
+ 	font-size: 20px;
+ }
+ a {
+  color: white;
+ 	text-decoration: none;
+ }
+ a.lil:hover {
+  background-color: white;
+  color: blue;
+  text-decoration: none;
+ }
+ #searchinput {
+ 	background-color: #D5D5D5;
+ 	border: 0px;
+ 	width:63%;
+    margin-left: 1%; 
+    font-family: Silkscreen;
+    color: blue !important;
+   	font-size: 20px;
+ }
+ .overlay {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+
+.main, .miku {
+  display: none;
+}
+.button {
+  padding: 10px;
+  position: fixed;
+  bottom: 5%;
+  left: 5%;
+  border: 1px solid #6666FF;
+  border-radius: 5px;
+  color: #6666FF;
+  font-size: 14px;
+  background-color: transparent;
+}
+.overlay2 {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.9);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay2:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup3 {
+  color: white;
+  margin: 70px auto;
+  padding: 20px;
+  background: transparent;
+  border-radius: 5px;
+  border: 5px solid white;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup3 h2 {
+  font-family: Segoe UI;
+  font-weight: 100;
+  margin-top: 0;
+  color: white;
+}
+.popup3 .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+.popup3 .close:hover {
+  color: white;
+}
+.popup3 .content2 {
+  color: white;
+  max-height: 30%;
+  overflow: auto;
+}
+#linkinput {
+  background-color: #D5D5D5;
+  font-family: Silkscreen;
+    color: blue !important;
+    font-size: 10x;
+    border: 0px;
+    position: absolute;
+    right: 30px;
+    width: 65%;
+}
+span {
+  margin: 0%;
+}
+.button_add {
+  padding: 5px;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  background-color: transparent;
+}
+.button_delete {
+  padding: 5px;
+  right: 105px;
+  position: absolute;
+  bottom: 5%;
+  border: 1px solid #D22121;
+  border-radius: 5px;
+  color: #D22121;
+  background-color: transparent;
+}
+.mail {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  font-size: 6px;
+}
+.edit_menu {
+  list-style-type: none;
+}
+.edit_menu:hover {
+  list-style-type: none;
+}
+.link_edit a {
+  font-size: 14px;
+}
+.link_edit a:hover {
+  width: 100%;
+  font-size: 14px;
+  background-color: white;
+  color: blue;
+}
+.editable {
+  text-align: center;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  };
+  .popup3{
+    width: 70%;
+  }
+}
+  </style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+
+
+<body class="xxx">
+  <img src="/scenes/max.png" width="100%" height="30" />
+  <p>989265293408525/ ////       4636436436346436      ////     6574585845745764574587   //// 54657654878445784369834   //436059838430</p>
+    <div id="container">
+       
+        <a href="#">
+            <figure>
+                 <img src="/scenes/xcx.png" width="200" height="300" />
+                <figcaption>[ 903989208409284309 ]</figcaption>
+            </figure>
+        </a>
+       
+          <figure>
+               <img src="/scenes/ren1.png" width="90%" height="90%" />
+              <figcaption>[ 34683498659045483223 ]</figcaption>
+          </figure>
+          <figure>
+            <img src="/scenes/ren2.png" width="90%" height="90%" />
+           <figcaption>[ 09653004305845465457 ]</figcaption>
+       </figure>
+     
+    </div>
+
+
+    
+    
+  
+
+
+</body>
+
+</html>
+
+
+</body>
+
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+
