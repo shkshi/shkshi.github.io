@@ -8,11 +8,95 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
   <style>
-html,
-body {
+html
+ {
+
+
   background: #000000;
   color: #9dff00;
 }
+
+
+body {
+
+	padding: 20px;
+	background: #000000;
+}
+
+.container {
+	width: 100%;
+	height: auto;	
+}
+
+.gallery-wrapper {
+	width: 100%;
+	max-width: 340px;
+	margin: 0 auto;
+	height: auto;
+}
+
+.gallery {
+	
+
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	width: 100%;
+	height: auto;
+	
+
+	display: flex;
+	flex-direction: column;
+	
+}
+
+.gallery-item:not(:last-of-type) {
+	margin-bottom: 40px;
+}
+
+.gallery-img {
+	max-width: 100%;
+}
+
+.gallery-im-caption {
+	margin: 0;
+	padding: 8px;
+	background: #3a3a3a;
+	color: #f2f2f2;
+}
+
+
+@media screen and (min-width: 769px) {
+	
+	.gallery-wrapper {
+		max-width: 1240px;
+	}
+	
+	.gallery {
+
+
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+
+	}
+	
+	.gallery-item {
+		padding: 20px;
+	}
+	
+	.gallery-img {
+		min-width: 350px;
+		max-width: 350px;
+	}
+	
+}
+
+
+
+
+
 a {
   color: #0000ee;
 }
@@ -35,11 +119,10 @@ a:hover {
   background: #6ce000;
   text-align: center;
   padding: 2px;
-  color: #ffffff;
+  color: #000000;
   width: 100%;
 }
-.postarea {
-}
+
 .rules {
   font-size: 0.7em;
 }
@@ -263,6 +346,17 @@ footer{
     width: 100%;
     height: 220px;
 }
+
+.x0x0{
+  width: 100%;
+  height: 70vh;
+}
+
+.out0{
+  width: 92%;
+  height: 70vh;
+}
+
   </style>
 
 </head>
@@ -270,21 +364,61 @@ footer{
 <!-- partial:index.partial.html -->
 
 <header>
-    <img class="blockme" src="./npc.jpg">
+
 </header>
 
-<body class="xxx">
+<body>
 
-
-
-    
         
-    <iframe src="https://shkashish.forum2x2.ru/" title="W3Schools Free Online Web Tutorials"></iframe> 
+    <iframe class="x0x0"src="./teatr.html"></iframe> 
 
-    
-    
+
+<main class="container">
+
+	<!-- Flexbox Image Gallery -->
+	<div class="gallery-wrapper">
+
+		<ul class="gallery">
+
+
+      <img class="out0"   src="https://i.ibb.co/JC7DxH3/2023-07-24-03-14-48.jpg">
+
+      
+      <li class="gallery-item">
+				<img src="https://i.ibb.co/s1Xg3bN/dowxnload.png" class="gallery-img">
+
+			</li>
+
+      <li class="gallery-item">
+				<img src="https://i.ibb.co/Dw8Z50p/2023-07-24-03-12-49.jpg" class="gallery-img">
+
+			</li>
+
+      <li class="gallery-item">
+				<img src="https://i.ibb.co/TcxrKc2/2023-07-24-03-12-58.jpg" class="gallery-img">
+
+			</li>
+			
+			<li class="gallery-item">
+				<img src="https://i.ibb.co/S7PTqx5/2023-07-24-03-07-26.jpg" class="gallery-img">
+
+			</li>
+			<li class="gallery-item">
+				<img src="https://i.ibb.co/fGmL3yK/2023-07-24-03-07-23.jpg" class="gallery-img">
+
+			</li>
+			<li class="gallery-item">
+				<img src="https://i.ibb.co/0ywCt6Z/2023-07-24-03-06-46.jpg" class="gallery-img">
+
+			</li>
+
+		</ul>
+
+	</div>
+
+</main>
   
-
+<!--   <p class="gallery-im-caption">Some dummy text as an example</p>   -->
 
 </body>
 
